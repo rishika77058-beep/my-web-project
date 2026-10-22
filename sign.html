@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Signup Page</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background: linear-gradient(120deg, #2980b9, #6dd5fa);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background: #2980b9;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1f6691;
+}
+
+#otpSection {
+    display: none;
+}
+
+.captcha {
+    margin: 10px 0;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Sign Up</h2>
+
+    <input type="text" id="name" placeholder="Enter Name" required>
+    <input type="text" id="mobile" placeholder="Enter Mobile Number" required>
+
+    <button onclick="sendOTP()">Send OTP</button>
+
+    <div id="otpSection">
+        <input type="text" id="otp" placeholder="Enter OTP">
+    </div>
+
+    <div class="captcha" id="captcha"></div>
+    <input type="text" id="captchaInput" placeholder="Enter Captcha">
+
+    <button onclick="verify()">Verify & Sign Up</button>
+</div>
+
+<script>
+let generatedOTP;
+let num1, num2;
+
+function sendOTP() {
+    generatedOTP = Math.floor(1000 + Math.random() * 9000);
+    alert("Your OTP is: " + generatedOTP);
+    document.getElementById("otpSection").style.display = "block";
+}
+
+
+function generateCaptcha() {
+    num1 = Math.floor(Math.random() * 10);
+    num2 = Math.floor(Math.random() * 10);
+    document.getElementById("captcha").innerText = 
+        "Solve: " + num1 + " + " + num2;
+}
+
+generateCaptcha();
+
+function verify() {
+    let userOTP = document.getElementById("otp").value;
+    let captchaInput = document.getElementById("captchaInput").value;
+
+    if (userOTP != generatedOTP) {
+        alert("Wrong OTP ?");
+        return;
+    }
+
+    if (parseInt(captchaInput) !== (num1 + num2)) {
+        alert("Wrong CAPTCHA ?");
+        generateCaptcha();
+        return;
+    }
+
+    alert("Signup Successful !");
+}
+</script>
+
+</body>
+</html>

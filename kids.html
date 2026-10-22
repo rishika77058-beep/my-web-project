@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kids Clothing Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+
+	
+	
+h3{
+	color:maroon;
+	}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background:tan;
+    width: 220px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.price {
+    color: black;
+    font-weight: bold;
+}
+
+button {
+    margin: 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+body {
+  font-family: 'Baloo 2', cursive;
+  background-color: #FFF8DC;
+}
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+  color: #FF69B4;
+}
+
+p {
+  font-family: 'Patrick Hand', cursive;
+  color: #333;
+}
+
+.add {
+    background: #d2a679;
+    color: white;
+}
+
+.buy {
+    background: #808080;
+    color: black;
+}
+@keyframes grow{0%{font-size:5;}
+	20%{font-size:10px;}
+	40%{font-size:15px;}
+	60%{font-size:30px;}
+	80%{font-size:40px;}
+	100%{font-size:40px;;} }
+@keyframes text{0%{color:blue;}
+	20%{color:red;}
+	40%{color:black;}
+	60%{color:teal;}
+	80%{color:orange;}
+	100%{color:maroon;} }
+.blink{
+font-size:20px;
+animation: grow 2s forwards, text 1s infinite;}
+
+</style>
+</head>
+
+<body>
+<h1 align="center">CLIPKART FASHION STORE</H1>
+
+<h2 class="blink" style="text-align:center;font-family:chiller;">Kids Section</h2>
+
+<div class="container">
+
+    <div class="card">
+        <img src="\clipkart\Images\images (7).jpg">
+        <h3>Trackshoot</h3>
+        <p class="price">499 Rs.</p>
+        <button class="add" onclick="addToCart('Trackshoot')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Trackshoot')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (18).jpg">
+        <h3>Frock</h3>
+        <p class="price">299 Rs.</p>
+        <button class="add" onclick="addToCart('Frock')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Frock')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (19).jpg">
+        <h3>Kids-wear</h3>
+        <p class="price">799 Rs.</p>
+        <button class="add" onclick="addToCart('Kids-wear')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Kids-wear')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (20).jpg">
+        <h3>Bed</h3>
+        <p class="price">4999  Rs.</p>
+        <button class="add" onclick="addToCart('Bed')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Bed')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (12).jpg">
+        <h3>Sweatshirt</h3>
+        <p class="price">999 Rs.</p>
+        <button class="add" onclick="addToCart('Sweatshirt')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Sweatshirt')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (22).jpg">
+        <h3>Accesories</h3>
+        <p class="price">299 Rs.</p>
+        <button class="add" onclick="addToCart('Accesories')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Accesories')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (21).jpg">
+        <h3>Shoes</h3>
+         <p class="price">800 Rs.</p>
+        <button class="add" onclick="addToCart('Shoes')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Shoes')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (24).jpg">
+        <h3>Ethnic</h3>
+        <p class="price">999 Rs.</p>
+        <button class="add" onclick="addToCart('Ethnic')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Ethnics')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (25).jpg">
+        <h3>Cycle</h3>
+        <p class="price">5000 Rs.</p>
+        <button class="add" onclick="addToCart('Cycle')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Cycle')">Buy Now</button>
+    </div>
+
+
+</div>
+
+<script>
+function addToCart(item) {
+    alert(item + " added to cart !!");
+}
+
+function buyNow(item) {
+    alert("Redirecting to payment for " + item + " !!");
+    
+}
+</script>
+
+</body>
+</html>

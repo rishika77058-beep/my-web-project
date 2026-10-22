@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Women Clothing Store</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: pink;
+}
+	
+	
+h3{
+	color:maroon;
+	}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: lavendor;
+    width: 220px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    margin: 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+h1{background:lavendor;
+	font-family:chiller;color:blue;}
+
+.add {
+    background: orange;
+    color: white;
+}
+
+.buy {
+    background: red;
+    color: white;
+}
+@keyframes grow{0%{font-size:5;}
+	20%{font-size:10px;}
+	40%{font-size:15px;}
+	60%{font-size:30px;}
+	80%{font-size:40px;}
+	100%{font-size:40px;;} }
+@keyframes text{0%{color:blue;}
+	20%{color:red;}
+	40%{color:black;}
+	60%{color:teal;}
+	80%{color:orange;}
+	100%{color:maroon;} }
+.blink{
+font-size:20px;
+animation: grow 2s forwards, text 1s infinite;}
+
+</style>
+</head>
+
+<body>
+<h1 align="center">CLIPKART FASHION STORE</H1>
+
+<h2 class="blink" style="text-align:center;font-family:chiller">Women Section</h2>
+
+<div class="container">
+
+    <div class="card">
+        <img src="\clipkart\Images\kurti.jpg">
+        <h3>Kurti</h3>
+        <p class="price">499 Rs.</p>
+        <button class="add" onclick="addToCart('Kurti')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Kurti')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (33).jpg">
+        <h3>Saree</h3>
+        <p class="price">999 Rs.</p>
+        <button class="add" onclick="addToCart('Saree')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Saree')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (5).jpg">
+        <h3>Jeans</h3>
+        <p class="price">799 Rs.</p>
+        <button class="add" onclick="addToCart('Jeans')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Jeans')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download.jpg">
+        <h3>Trouser</h3>
+        <p class="price">499 Rs.</p>
+        <button class="add" onclick="addToCart('trouser')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('trouser')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\images (4).jpg">
+        <h3>Bodycon</h3>
+        <p class="price">999 Rs.</p>
+        <button class="add" onclick="addToCart('Bodycon')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('bodycon')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\imagessss.jpg">
+        <h3>Top</h3>
+        <p class="price">999 Rs.</p>
+        <button class="add" onclick="addToCart('Top')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Top')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (1).jpg">
+        <h3>Watch</h3>
+         <p class="price">3000 Rs.</p>
+        <button class="add" onclick="addToCart('Watch')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Watch')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (8).jpg">
+        <h3>Purse</h3>
+        <p class="price">9999 Rs.</p>
+        <button class="add" onclick="addToCart('Purse')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Purse')">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="\clipkart\Images\download (7).jpg">
+        <h3>Shoes</h3>
+        <p class="price">5000 Rs.</p>
+        <button class="add" onclick="addToCart('Shoes')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Shoes')">Buy Now</button>
+    </div>
+
+
+</div>
+
+<script>
+function addToCart(item) {
+    alert(item + " added to cart !!");
+}
+
+function buyNow(item) {
+    alert("Redirecting to payment for " + item + " !!");
+    
+}
+</script>
+
+</body>
+</html>
